@@ -5,6 +5,7 @@ form.addEventListener("submit", (event) => {
   // Make sure the form is not submitted
   event.preventDefault();
   // endpoint for logging in
+  //switch to Env Variables
   const apiUrl = "http://localhost:8080/api/authenticate/login";
   let uname = document.querySelector("#uname").value;
   console.log(uname);

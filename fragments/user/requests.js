@@ -91,8 +91,10 @@ export default async () => {
           tr.appendChild(tdActions);
         }
         friendsTable.appendChild(tr);
-        document.querySelector(`.button${index}-deny`).addEventListener("click", actionRequest);
-        document.querySelector(`.button${index}-accept`).addEventListener("click", actionRequest);
+        if(me == friend.target) {
+          document.querySelector(`.button${index}-deny`).addEventListener("click", actionRequest);
+          document.querySelector(`.button${index}-accept`).addEventListener("click", actionRequest);
+        }
       });
     }
     return;
